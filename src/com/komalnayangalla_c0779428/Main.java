@@ -3,11 +3,16 @@ package com.komalnayangalla_c0779428;
 import java.util.*;
 import java.io.*;
 
-class User{
-    float balance;
-    String accNo;
+/*
+ * @Author : Komal Nayan Galla
+ * @Author Roll No : C0779428
+ */
 
-    User()
+class User{
+    float balance; //Balance of the User
+    String accNo; //User's account Number
+
+    User() //Default Constructor
     {
         balance = 0.0f;
         accNo = "0000";
@@ -23,7 +28,7 @@ class User{
         }
     }
 
-    User(String accNo)
+    User(String accNo) //Constructor with accNo as Parameter , Constructor Overloading
     {
         this.accNo = accNo;
         String fileName = accNo+".txt";
@@ -52,7 +57,7 @@ class User{
         }
     }
 
-    User(float balance,String accNo)
+    User(float balance,String accNo) //Constructor with balance and accNo as Parameters , Constructor Overloading
     {
         this.balance = balance;
         this.accNo = accNo;
@@ -69,6 +74,7 @@ class User{
     }
 
     public void checkBalance() {
+        //Shows the Available Balance of the User, No Parameters, No Return Value
         String fileName = accNo+".txt";
         File file = new File(fileName);
         try {
@@ -84,6 +90,7 @@ class User{
 
     public void deposit(float amount)
     {
+        //Deposits some amount to user's account.. float type 'amount' --> Parameter and void return type
         String fileName = accNo+".txt";
         try {
             FileWriter fw = new FileWriter(fileName,false);
@@ -102,6 +109,7 @@ class User{
 
     public void withdraw(float amount)
     {
+        //Withdraw's some amount from user's account.. float type 'amount' --> Parameter and void return type
         String fileName = accNo+".txt";
         if(amount > balance)
         {
