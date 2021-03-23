@@ -1,7 +1,7 @@
 # JavaSEAssignment-7
 Create a banking program that will keep the balance of four users in four separate text files.
 
-1.	Project/Package name – name-id#-a9
+1.	Project/Package name – name-id#-a7
 
 a.	You must be able to update the user's balance 
 b.	You must be able to reduce the user's balance 
